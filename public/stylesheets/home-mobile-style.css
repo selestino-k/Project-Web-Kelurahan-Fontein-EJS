@@ -1,0 +1,91 @@
+
+@media  screen and (min-width:1024px){
+    .cover .content p{
+        padding-right: 50vmax;
+        padding-bottom: 15px;
+
+    }
+    .cover .content{
+        padding-top: 40vmin;
+
+    }
+    .numbers .rectabgle{
+        width: 17rem;
+        height: 12rem;
+    }
+
+    .cover .content h1{
+        font-size: 5em;
+    }
+    .cover .content p{
+        font-size: 15px;
+    }
+}
+
+@media  screen and (max-width : 768px){
+    .cover{
+        height: 25em;
+       background-size: cover;
+        
+    }
+    .cover .content p{
+        font-size: small;
+    }
+    .cover .content h1{
+        font-size: 10vmin;
+    }
+    .cover .content{
+        padding-top: 30vmin;
+
+    }
+}
+
+@media  screen and (max-width : 425px){
+    .cover{
+        height: 25em;
+       background-size: cover;
+        
+    }
+    .cover .content p{
+        font-size: small;
+    }
+    .cover .content h1{
+        font-size: 10vmin;
+    }
+    .cover .content{
+        padding-top: 40vmin;
+
+    }
+}
+
+@media  screen and (max-width : 375px){
+    .cover{
+        height: 30em;
+       background-size: cover;
+        
+    }
+    .cover .content p{
+        font-size: small;
+    }
+    .cover .content h1{
+        font-size: 2em;
+    }
+    .cover .content{
+        padding-top: 60vmin;
+
+    }
+    header .navbar-brand{
+        font-size: medium;
+        
+    }
+    header .navbar-brand img{
+        size: 50%;
+    }
+    .numbers .rectangle{
+        width: 11em;
+        height: 8rem;
+    }
+    .numbers .rectangle h1{
+        font-size:2rem ;
+    }
+}
