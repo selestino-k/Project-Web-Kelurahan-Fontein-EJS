@@ -54,9 +54,11 @@ header{
 }
 
 /** -- STYLE KOTAK ANGKA STATS - RECTANGLE **/
+
 .rectangle1, .rectangle2, .rectangle3, .rectangle4{
     transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
     cursor: pointer;
+    
 }
 .rectangle1:hover, .rectangle2:hover, .rectangle3:hover, .rectangle4:hover{
   transform: scale(1.05);
