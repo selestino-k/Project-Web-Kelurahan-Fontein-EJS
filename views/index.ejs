@@ -35,10 +35,12 @@
     <main>  
         <section class="section-1 container-fluid p-0">
             <div class="cover">
-                <div class="content text-start pe-2">
-                    <h1>Selamat Datang</h1>
-                    <p>Website ini dibuat dengan tujuan memvisualisasi data yang ada pada Kelurahan Fontein agar dapat mempermudah pengunjung untuk mencakup informasi terkait data UMKM dan juga data penduduk bagi penduduk Kelurahan Fontein.</p>
-                </div>
+                    <div class="content text-start pe-2">
+                        <div class="container">
+                        <h1>Selamat Datang</h1>
+                        <p>Website ini dibuat dengan tujuan memvisualisasi data yang ada pada Kelurahan Fontein agar dapat mempermudah pengunjung untuk mencakup informasi terkait data UMKM dan juga data penduduk bagi penduduk Kelurahan Fontein.</p>
+                        </div>
+                    </div>
             </div>
             <h3>Ikhtisar Data</h3>
             <div class="container-fluid text-end">
@@ -75,10 +77,30 @@
                     <input type="search" class="form-control mt-3 fa-pull-right" id="myinput"  id = "search" placeholder="Cari">
                 </div>
                 <br> <br>
+                <table id="example" class="table mt-5 mt-5 table-str table-bordered" style="width:95% ;margin-right: auto;margin-left: auto;">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="text-center">No.</th>
+                            <th scope="col" class="text-center">Nama File</th>
+                            <th scope="col" class="text-center">Jenis File</th>
+                            <th scope="col" class="text-center">Download</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row" class="text-center">1</th>
+                            <td scope="row" class="text-center">Artikel- Warisan NTT</td>
+                            <td scope="row" class="text-center">PDF</td>
+                            <td scope="row" class="text-center"><button class="btn btn-primary badge-pill">Unduh</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            
 
-            <div class="cards">
+
+                <!-- <div class="cards">
                 
-                    <!-- Cards- memuat dokuman2 yg dipublikasi dlm btk grid -->
+                    <!-- Cards- memuat dokuman2 yg dipublikasi dlm btk grid
 
                     <div class="d-flex flex-row justify-content-center flex-wrap">
                         <div class="card">
@@ -112,7 +134,7 @@
                             </div>
                         </div>
                     </div>                    
-                </div>
+                </div>-->
             </div>
             <br> <br>
         </section>
@@ -126,6 +148,8 @@
         
         <script src="/javascripts/darkmode.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
+        <script src="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
     </body>
 </html>

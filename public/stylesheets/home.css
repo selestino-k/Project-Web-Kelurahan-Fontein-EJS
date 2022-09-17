@@ -14,9 +14,6 @@ header,section{
     font-family: "Inter", sans-serif;
     font-family: "COCOGOOSE", sans-serif;
     font-family: "Barlow";
-
-
-
     --navbarcolor: #ffecab;
     --footercolor : #2b2e7f;
 
@@ -30,27 +27,33 @@ header{
 
 
 .cover{
-
     width: 100%;
-    height: 65vmin;
+    height: 65vh;
     background : url(/images/Kantor\ Lurah\ Fontein\ front.jpg);
     background-size: cover;
     position: relative;
     color: white;
-    
 }
 .cover .content{
     background: rgba(61, 61, 61, 0.5);
     height: 100%;
     width: 100%;
-    padding-left: 50px;
-    padding-right: 1000px;
+    padding-right: 1000vw;
 }
 .cover .content h1{
     font-family: "Cocogoose";
+    font-size: 5vw;
 }
 .cover .content p{
     font-family: "Inter";
+    padding-right: 20vw;
+}
+.container{
+    position: absolute;
+    bottom: 0;
+}
+.cover .content{
+    padding-left: 2vw;
 }
 
 /** -- STYLE KOTAK ANGKA STATS - RECTANGLE **/
@@ -58,7 +61,6 @@ header{
 .rectangle1, .rectangle2, .rectangle3, .rectangle4{
     transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
     cursor: pointer;
-    
 }
 .rectangle1:hover, .rectangle2:hover, .rectangle3:hover, .rectangle4:hover{
   transform: scale(1.05);
@@ -68,8 +70,8 @@ header{
 .rectangle1, .rectangle2, .rectangle3, .rectangle4{
     position:relative;
     z-index: 1;
-    width: 20em;
-    height: 10em;
+    /* width: 20vw;
+    height: 20vh; */
     padding-top: 4vmin;
     margin: 1rem;
     color : white;
@@ -107,13 +109,15 @@ header{
     overflow: hidden;
     position: relative;
 }
-.numbers .rectangle1 p, .rectangle2 p, .rectangle3 p, .rectangle4 p {
-    padding-right: 20px;
-    font-size: 18px;
-    
+.numbers.rectangle1 p, .numbers.rectangle2 p, .numbers.rectangle3 p, .numbers.rectangle4 p {
+    font-size: 22vw;
+}
+.rectangle1 p, .rectangle2 p, .rectangle3 p, .rectangle4 p{
+    padding-right: 1vw;
+    padding-bottom: 3vh;
 }
 .numbers .rectangle1 h1 , .rectangle2 h1, .rectangle3 h1, .rectangle4 h1{
-    font-size: 4rem;
+    font-size: 4.5vw;
     padding-right: 18px;
 }
 

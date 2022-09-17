@@ -1,91 +1,85 @@
-
+/* 
 @media  screen and (min-width:1024px){
     .cover .content p{
-        padding-right: 50vmax;
+        padding-right: 50vw;
         padding-bottom: 15px;
-
     }
     .cover .content{
-        padding-top: 40vmin;
-
+        padding-top: 40vh;
     }
-    .numbers .rectabgle{
-        width: 17rem;
-        height: 12rem;
+    .numbers .rectangle{
+        width: 17vw;
+        height: 12vw;
     }
 
     .cover .content h1{
-        font-size: 5em;
+        font-size: 5vw;
     }
     .cover .content p{
         font-size: 15px;
     }
+    .rectangle1, .rectangle2, .rectangle3, .rectangle4{
+        width: 20vw;
+        height: 20vh;
+    }
+}*/
+
+@media  screen and (min-width : 1024px){
+    .rectangle1, .rectangle2, .rectangle3, .rectangle4{
+        width: 25vw;
+        height: 21vh;
+    }
+}
+@media  screen and (min-width : 769px){
+    .rectangle1, .rectangle2, .rectangle3, .rectangle4{
+        width: 20vw;
+        height: 20vh;
+    }
 }
 
 @media  screen and (max-width : 768px){
-    .cover{
-        height: 25em;
-       background-size: cover;
-        
+    .rectangle1, .rectangle2, .rectangle3, .rectangle4{
+        width: 30vw;
+        height: 25vh;
     }
-    .cover .content p{
-        font-size: small;
+    .rectangle1 p, .rectangle2 p, .rectangle3 p, .rectangle4 p{
+        padding-right: 1vw;
+        padding-bottom: 3vh;
     }
-    .cover .content h1{
-        font-size: 10vmin;
+    .numbers .rectangle1 h1 , .rectangle2 h1, .rectangle3 h1, .rectangle4 h1{
+        font-size: 10vw;
+        padding-right: 18px;
     }
-    .cover .content{
-        padding-top: 30vmin;
 
-    }
 }
 
-@media  screen and (max-width : 425px){
-    .cover{
-        height: 25em;
-       background-size: cover;
-        
+@media  screen and (max-width : 426px){
+    .rectangle1, .rectangle2, .rectangle3, .rectangle4{
+        width: 45vmax;
+        height: 25vmax;
     }
-    .cover .content p{
-        font-size: small;
+    .rectangle1 p, .rectangle2 p, .rectangle3 p, .rectangle4 p{
+        padding-right: 1vw;
+        padding-bottom: 3vh;
     }
-    .cover .content h1{
-        font-size: 10vmin;
-    }
-    .cover .content{
-        padding-top: 40vmin;
-
+    .numbers .rectangle1 h1 , .rectangle2 h1, .rectangle3 h1, .rectangle4 h1{
+        font-size: 20vw;
+        padding-right: 18px;
     }
 }
 
 @media  screen and (max-width : 375px){
-    .cover{
-        height: 30em;
-       background-size: cover;
-        
+    .rectangle1, .rectangle2, .rectangle3, .rectangle4{
+        width: 30vmax;
+        height: 20vmax;
     }
-    .cover .content p{
-        font-size: small;
+    .rectangle1 p, .rectangle2 p, .rectangle3 p, .rectangle4 p{
+        padding-right: 1vw;
+        padding-bottom: 3vh;
     }
-    .cover .content h1{
-        font-size: 2em;
+    .numbers .rectangle1 h1 , .rectangle2 h1, .rectangle3 h1, .rectangle4 h1{
+        font-size: 20vw;
+        padding-right: 18px;
     }
-    .cover .content{
-        padding-top: 60vmin;
-
-    }
-    header .navbar-brand{
-        font-size: medium;
-        
-    }
-    header .navbar-brand img{
-        size: 50%;
-    }
-    .numbers .rectangle{
-        width: 11em;
-        height: 8rem;
-    }
-    .numbers .rectangle h1{
-        font-size:2rem ;
-    }
-}
+    
+} 

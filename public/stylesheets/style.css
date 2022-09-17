@@ -18,27 +18,23 @@ header,section{
     font-family: "Inter", sans-serif;
     font-family: "COCOGOOSE", sans-serif;
     font-family: "Barlow";
-
     --navbarcolor: #ffecab;
     --footercolor : #2b2e7f;
     --background-color: white;
     --textcolor: black;
-    --bordercolor : rgb(80, 80, 80);
+    --bordercolor : rgb(41, 41, 41);
     --navtoggler : url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>")
-
-
 }
 .darkmode, body, .navbar, footer{
     -webkit-transition: 0.7s;
             transition: 0.7s;
 }
 .darkmode{
-   
     --background-color : rgb(54, 53, 53);
     --textcolor: white;
     --bordercolor : rgb(175, 175, 175);
     --navbarcolor :  rgb(46, 46, 46);
-    --footercolor :  rgb(46, 46, 46);
+    --footercolor :  rgb(27, 27, 27);
     --navtoggler : url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%28255, 255, 255, 15%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>")
 }
 body{
@@ -52,6 +48,16 @@ body{
 }
 .caripublikasi #search{
     background-color: var(--background-color);
+}
+.table{
+    color: var(--textcolor);
+    border-collapse: collapse;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.table th{
+    background-color:var(--footercolor);
+    color: white;
 }
 /** HEADER Style**/
 
@@ -83,7 +89,6 @@ header .navbar-placeholder{
     font-weight: bold;
 }
 header{
-   
     z-index: 1000;
     position: relative;
     overflow: visible;
