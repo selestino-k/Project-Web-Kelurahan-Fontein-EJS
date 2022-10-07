@@ -48,7 +48,8 @@ header{
     padding-top: 25px;
     padding-left: 50px;
     height:100%;
-    overflow:hidden;
+    overflow-y: visible;
+    position: relative;
     
 }
 /* .teksprofil{

@@ -4,14 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var favicon = require('express-favicon');
+var bodyparser = require('body-parser');
+var mySql = require('mysql');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var profileRouter = require('./routes/profile');
-var strukturRouter = require('./routes/struktur');
-var dataRouter = require('./routes/data');
-
-
+var indexRouter = require('./server/routes/index');
+var usersRouter = require('./server/routes/users');
+var profileRouter = require('./server/routes/profile');
+var strukturRouter = require('./server/routes/struktur');
+var dataRouter = require('./server/routes/data');
 
 var app = express();
 
@@ -19,14 +19,22 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+const port = process.env.PORT || "3000";
 
 app.use(favicon(path.join(__dirname,'public','images','489px-LOGO_KOTA_KUPANG (1 300x300).png')));
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(logger("dev"));
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: false }));
+// app.use(cookieParser());
+app.use(bodyparser.urlencoded({ extended: false }));
+
+
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Parse application/json
+app.use(bodyparser.json());
+  
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -34,7 +42,7 @@ app.use('/users', usersRouter);
 app.use('/users', usersRouter);
 app.use('/profile', profileRouter);
 app.use('/struktur',strukturRouter)
-app.use('/',dataRouter);
+app.use('/data',dataRouter);
 
 
 
@@ -56,4 +64,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+app.listen(port, () => console.log(`listening on ${port}`));  

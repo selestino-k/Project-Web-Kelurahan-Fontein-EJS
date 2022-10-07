@@ -18,6 +18,7 @@
     <!-- <script src="/src/main.js"></script> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js" integrity="sha512-8pHNiqTlsrRjVD4A/3va++W1sMbUHwWxxRPWNyVlql3T+Hgfd81Qc6FC5WMXDC+tSauxxzp1tgiAvSKFu1qIlA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
     
     
 </head>
@@ -71,12 +72,8 @@
                     </div>
                 </div>
             </div>
-            <div class="publikasi">
-                <h3>Publikasi Terkini</h3>
-                <div class="caripublikasi">
-                    <input type="search" class="form-control mt-3 fa-pull-right" id="myinput"  id = "search" placeholder="Cari">
-                </div>
-                <br> <br>
+            <h3>Publikasi Terkini</h3>
+            <div class="tabel">
                 <table id="example" class="table mt-5 mt-5 table-str table-bordered" style="width:95% ;margin-right: auto;margin-left: auto;">
                     <thead>
                         <tr>
@@ -98,43 +95,7 @@
             
 
 
-                <!-- <div class="cards">
                 
-                    <!-- Cards- memuat dokuman2 yg dipublikasi dlm btk grid
-
-                    <div class="d-flex flex-row justify-content-center flex-wrap">
-                        <div class="card">
-                            <img src="/images/sk fontein cover.jpg" class="card-img-top "alt="Dokumen">
-                            <div class="card-body">
-                                <h6 class="card-title">
-                                    Dokumen
-                                </h6>
-                                <p class="card-text">Dokumen publikasi yang bisa diunduh masyarakat</p>
-                                <a href="" class="btn">Unduh</a>    
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="/images/sk fontein cover.jpg" class="card-img-top "alt="Dokumen">
-                            <div class="card-body">
-                                <h6 class="card-title">
-                                        Dokumen
-                                </h6>
-                                <p class="card-text">Dokumen publikasi yang bisa diunduh masyarakat</p>
-                                <a href="" class="btn">Unduh</a>    
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img src="/images/sk fontein cover.jpg" class="card-img-top "alt="Dokumen">
-                            <div class="card-body">
-                                <h6 class="card-title">
-                                        Dokumen
-                                    </h6>
-                                <p class="card-text">Dokumen publikasi yang bisa diunduh masyarakat</p>
-                                <a href="" class="btn">Unduh</a>    
-                            </div>
-                        </div>
-                    </div>                    
-                </div>-->
             </div>
             <br> <br>
         </section>
@@ -145,10 +106,10 @@
           <!-- already imported with js -->
           <%-include('footer'); -%>
         </footer>
-        
+
+        <script src="/javascripts/document.js"></script>
         <script src="/javascripts/darkmode.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css"></script>
         <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
     </body>

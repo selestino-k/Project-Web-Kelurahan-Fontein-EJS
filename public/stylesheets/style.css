@@ -59,6 +59,19 @@ body{
     background-color:var(--footercolor);
     color: white;
 }
+.tabel{
+    margin: 3vw;
+}
+.buttondata {
+    padding-left: 4vw;
+    padding-top: 50px;
+    color: white;
+    padding-right: 4vw;  
+}
+.buttondata .btn{
+    color: white;
+    background-color: var(--footercolor);
+}
 /** HEADER Style**/
 
 header .navbar-placeholder{
