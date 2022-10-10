@@ -12,6 +12,8 @@ var usersRouter = require('./server/routes/users');
 var profileRouter = require('./server/routes/profile');
 var strukturRouter = require('./server/routes/struktur');
 var dataRouter = require('./server/routes/data');
+var database = require('./server/controller');
+
 
 var app = express();
 

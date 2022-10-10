@@ -3,17 +3,17 @@ const ctx = document.getElementById('myChart');
 const myChart = new Chart(ctx, {
     type: 'pie',
     data: {
-        labels: ['Kios', 'Tambal Ban', 'Kuliner', 'Print dan Fotokopi'],
+        labels: ['Kios', 'Tambal Ban', 'Kuliner', 'Print dan Fotokopi','Percintaan'],
         datasets: [{
             label: '# of Votes',
-            data: [10, 5, 4, 3],
+            data: [10, 5, 4, 3,1],
            
             backgroundColor: [
                 'rgba(2, 99, 132, 1)',
                 'rgba(220, 0, 0, 1)',
                 'rgba(255, 206, 86, 1)',
                 'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
+                'rgba(255, 102, 255, 1)',
                 'rgba(255, 159, 64, 1)'
             ],
             borderColor: [

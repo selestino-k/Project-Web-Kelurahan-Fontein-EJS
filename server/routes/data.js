@@ -8,5 +8,11 @@ router.get('/dataumkm', function(req, res, next) {
 router.get('/datamikro', function(req, res, next) {
   res.render('datamikro');
 });
+router.get('/datakecil', function(req, res, next) {
+  res.render('datakecil');
+});
+router.get('/datamenengah', function(req, res, next) {
+  res.render('datamenengah');
+});
 
 module.exports = router;
