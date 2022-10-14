@@ -5,14 +5,13 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var favicon = require('express-favicon');
 var bodyparser = require('body-parser');
-var mySql = require('mysql');
+
 
 var indexRouter = require('./server/routes/index');
 var usersRouter = require('./server/routes/users');
 var profileRouter = require('./server/routes/profile');
 var strukturRouter = require('./server/routes/struktur');
 var dataRouter = require('./server/routes/data');
-var database = require('./server/controller');
 
 
 var app = express();
@@ -67,3 +66,4 @@ app.use(function(err, req, res, next) {
 });
 
 app.listen(port, () => console.log(`listening on ${port}`));  
+

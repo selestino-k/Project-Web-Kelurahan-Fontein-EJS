@@ -42,6 +42,13 @@ body{
     background-color: var(--background-color);
     color : var(--textcolor);
 }
+a{
+    text-decoration: none;
+    color: white
+}
+a:hover{
+    color: white;
+}
 .cards .card{
     background-color: var(--background-color);
     border-color: var(--bordercolor);
