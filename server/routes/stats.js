@@ -48,7 +48,7 @@ router.get('/statistik/umkm', function (req, res, next) {
                                         "rgb(128,0,0)",
                                         "rgb(139,0,0)",
                                         "rgb(165,42,42)",],
-                                        data: [rows1[0].Tmikro, rows2[0].Tmenengah, rows3[0].Tkecil],
+                                        data: [rows1[0].Tmikro, rows3[0].Tmenengah, rows2[0].Tkecil],
                                         hoverOffset: 3,},
                                 );
                             } else {
