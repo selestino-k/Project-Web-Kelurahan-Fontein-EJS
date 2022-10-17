@@ -49,14 +49,19 @@
                     <div class="rectangle1">
                         <!-- <i class="fa-solid fa-people-simple fa-6x"></i>                         -->
                         <img class="icons" src="/images/icons8-queue-96.png" alt="">
-                        <h1>4.688</h1>
-                        <p>Total Penduduk</p>
+                        <% for (let row of rows8) {%>
+                        <h1><%= row.TotalUMKM %></h1>
+                        <% }%>
+                        <p>Total UMKM</p>
                     </div>
                     <div class="rectangle2">
                         <a href="/data/datamikro">
                         <!-- <i class="fa-solid fa-shop fa-6x"></i> -->
                         <img class="icons" src="/images/icons8-shop-96.png" alt="">
-                        <h1>95</h1>
+                        <% for (let row of rows5) {%>
+                        <h1><%= row.Tmikro %></h1>
+                        <% }%>
+            
                         <p>Usaha Mikro</p>
                         </a>
                     </div>
@@ -64,7 +69,10 @@
                         <a href="/data/datakecil">
                         <!-- <i class="fa-solid fa-cart-shopping fa-6x"></i> -->
                         <img class="icons" src="/images/icons8-buying-96.png" alt="">
-                        <h1>52</h1>
+                        <% for (let row of rows7) {%>
+                        <h1><%= row.Tkecil %></h1>
+                        <% }%>
+
                         <p>Usaha Kecil</p>
                         </a>
                     </div>
@@ -72,7 +80,10 @@
                         <a href="/data/datamenengah">
                         <!-- <i class="fa-solid fa-building fa-6x"></i> -->
                         <img class="icons" src="/images/icons8-building-96.png" alt="">
-                        <h1>23</h1>
+                        <% for (let row of rows6) {%>
+                        <h1><%= row.Tmenengah %></h1>
+                        <% }%>
+
                         <p>Usaha Menengah</p>
                         </a>
                     </div>

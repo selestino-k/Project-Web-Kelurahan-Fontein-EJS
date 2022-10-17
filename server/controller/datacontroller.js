@@ -9,111 +9,6 @@ const pool = mysql.createPool({
   database: process.env.DB_NAME,
 });
 
-//View data
-exports.view_pendidikan = (req, res) => {
- 
-  //connect db.
-  pool.getConnection((err, connection) => {
-    if (err) throw err; //NOT CONNECTED.
-    console.log(`Connected as ID ` + connection.threadId);
-    
-    //show data
-    connection.query('SELECT * FROM tumbal', (err,rows)=>{
-        //when done with the connection, release it. 
-        connection.release();
-
-        if(!err){
-            res.render("data-pendidikan",{rows});
-        }
-        else{
-            console.log(err);
-        }
-        console.log('The data from user table: \n', rows);
-
-    });
-
-  });
-};
-
-//View data
-exports.view_pekerjaan = (req, res) => {
- 
-  //connect db.
-  pool.getConnection((err, connection) => {
-    if (err) throw err; //NOT CONNECTED.
-    console.log(`Connected as ID ` + connection.threadId);
-    
-    //show data
-    connection.query('SELECT * FROM tumbal', (err,rows)=>{
-        //when done with the connection, release it. 
-        connection.release();
-
-        if(!err){
-            res.render("data-pekerjaan",{rows});
-        }
-        else{
-            console.log(err);
-        }
-        console.log('The data from user table: \n', rows);
-
-    });
-
-  });
-};
-
-//View data
-exports.view_jeniskelamin = (req, res) => {
- 
-  //connect db.
-  pool.getConnection((err, connection) => {
-    if (err) throw err; //NOT CONNECTED.
-    console.log(`Connected as ID ` + connection.threadId);
-    
-    //show data
-    connection.query('SELECT * FROM tumbal', (err,rows)=>{
-        //when done with the connection, release it. 
-        connection.release();
-
-        if(!err){
-            res.render("data-jeniskelamin",{rows});
-        }
-        else{
-            console.log(err);
-        } 
-        console.log('The data from user table: \n', rows);
-
-    });
-
-  });
-};
-
-//View data
-exports.view_umur = (req, res) => {
- 
-  //connect db.
-  pool.getConnection((err, connection) => {
-    if (err) throw err; //NOT CONNECTED.
-    console.log(`Connected as ID ` + connection.threadId);
-    
-    //show data
-    connection.query('SELECT * FROM tumbal', (err,rows)=>{
-        //when done with the connection, release it. 
-        connection.release();
-
-        if(!err){
-            res.render("data-umur",{rows});
-        }
-        else{
-            console.log(err);
-        } 
-        console.log('The data from user table: \n', rows);
-
-    });
-
-  });
-};
-
-//View data
 exports.view_umkm = (req, res) => {
  
   //connect db.
@@ -121,46 +16,27 @@ exports.view_umkm = (req, res) => {
     if (err) throw err; //NOT CONNECTED.
     console.log(`Connected as ID ` + connection.threadId);
     
-    //show data
-    connection.query('SELECT * FROM tumbal', (err,rows)=>{
-        //when done with the connection, release it. 
-        connection.release();
+    connection.query("SELECT COUNT(id_Usaha) AS Tmikro from umkm WHERE omset ='Omset <= Rp.300 Juta' AND kekayaan_bersih_usaha = 'KBU <= Rp.50 Juta' OR omset ='Omset <= Rp.300 Juta' AND kekayaan_bersih_usaha = 'Rp.50 Juta < KBU <= Rp.500 Juta' OR omset = 'Rp.300 Juta < Omset <= Rp.2,5 Milliar' AND kekayaan_bersih_usaha = 'KBU <= Rp.50 Juta'", (err, rows1) => {
+      //when done with the connection, release it.
+      connection.query("SELECT COUNT(id_Usaha) AS Tmenengah from umkm WHERE omset ='Rp.2,5 Milliar < Omset <= Rp.50 Milliar' AND kekayaan_bersih_usaha = 'Rp.500 Juta < KBU <= Rp.10 Milliar'", (err, rows2) => {
+          //when done with the connection, release it.
+          connection.query("SELECT COUNT(id_Usaha) AS Tkecil from umkm WHERE omset ='Rp.300 Juta < Omset <= Rp.2,5 Milliar' AND kekayaan_bersih_usaha = 'KBU <= Rp.500 Juta' OR omset ='Rp.300 Juta < Omset <= Rp.2,5 Milliar' AND kekayaan_bersih_usaha = 'Rp.500 Juta < KBU <= Rp.10 Milliar' OR omset = 'Rp.2,5 Milliar < Omset <= Rp.50 Milliar' AND kekayaan_bersih_usaha = 'Rp.50 Juta < KBU <= Rp.500 Juta'", (err, rows3) => {
+              //when done with the connection, release it.
+              connection.query("SELECT COUNT(id_Usaha) AS TotalUMKM FROM umkm", (err, rows4) => {
+              //when done with the connection, release it.
+                //when done with the connection, release it. 
+                connection.release();
 
-        if(!err){
-            res.render("data-umkm",{rows});
-        }
-        else{
-            console.log(err);
-        } 
-        console.log('The data from user table: \n', rows);
-
+                if(!err){
+                    res.render("data",{rows1, rows2, rows3,rows4});
+                }
+                else{
+                    console.log(err);
+                } 
+                console.log('The data from user table: \n', rows1, rows2, rows3,rows4);
+              });
+        });
+      });
     });
-
-  });
-};
-
-//View data
-exports.view_statuspernikahan = (req, res) => {
- 
-  //connect db.
-  pool.getConnection((err, connection) => {
-    if (err) throw err; //NOT CONNECTED.
-    console.log(`Connected as ID ` + connection.threadId);
-    
-    //show data
-    connection.query('SELECT * FROM tumbal', (err,rows)=>{
-        //when done with the connection, release it. 
-        connection.release();
-
-        if(!err){
-            res.render("data-statuspernikahan",{rows});
-        }
-        else{
-            console.log(err);
-        } 
-        console.log('The data from user table: \n', rows);
-
-    });
-
   });
 };

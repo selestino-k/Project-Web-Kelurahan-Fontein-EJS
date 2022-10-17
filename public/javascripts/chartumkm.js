@@ -1,50 +1,48 @@
-const ctx = document.getElementById('myChart');
+const labels = ["Usaha Mikro", "Usaha Menengah", "Usaha Kecil"];
 
-const myChart = new Chart(ctx, {
-    type: 'pie',
-    data: {
-        labels: ['Usaha  Mikro', 'Usaha Kecil', 'Usaha Menengah',],
-        datasets: [{
-            label: '# of Votes',
-            data: [95, 52, 23,],
-           
-            backgroundColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderColor: [
-                'rgba(0,0,0,1)',
-                'rgba(0,0,0,1)',
-                'rgba(0,0,0,1)',
-                'rgba(0,0,0,1)',
-                'rgba(0,0,0,1)',
-                'rgba(0,0,0,1)',
-            ],
-            borderWidth: 0
-        }]
+const data = {
+  labels: labels,
+  datasets: [
+    {
+      labels: ["My First dataset"],
+      backgroundColor: ["#ECDBBA", "#C84B31", "#2D4263"],
+
+      data: [4, 5, 5],
+      hoverOffset: 4,
     },
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                }
-            }]
-        },
-        plugins: {
-            legend: {
-                display: true,
-                labels: {
-                    color: 'rgb(0,0,0)'
-                }
-            }
+  ],
+};
+
+const config = {
+  type: "pie",
+  data: data,
+  options: {
+    scales:{
+      x:{
+        ticks:{
+        
         }
-    }
-    
+          
+      }
+    },
+     
+
+    maintainAspectRatio: false,
+    plugins: {
+      title: {
+        display: true,
+        text: "Grafik Kategori Usaha",
+      },
+    },
+  },
+};
+
+let myChart = new Chart(document.getElementById("myChart"), config);
+axios.get("/statistics/statistik/umkm").then((e) => {
+  console.log(e);
+  myChart.data.datasets[0].data = e.data.data;
+  myChart.update();
 });
+
+
+
