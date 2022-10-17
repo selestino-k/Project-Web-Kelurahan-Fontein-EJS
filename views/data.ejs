@@ -19,6 +19,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 </head>
@@ -86,10 +87,24 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td scope="row" class="text-center">170</th>
-                            <td scope="row" class="text-center">95</td>
-                            <td scope="row" class="text-center">52</td>
-                            <td scope="row" class="text-center">23</td>
+                            <% for (let row of rows4) {%>
+                            <td scope="row" class="text-center"><%= row.TotalUMKM %></td>
+                            <% }%>
+                            
+                                
+                            <% for (let row of rows3) {%>
+                            <td scope="row" class="text-center"><%= row.Tmenengah %></td>
+                            <% }%>
+             
+                            <% for (let row of rows3) {%>
+                            <td scope="row" class="text-center"><%= row.Tkecil %></td>
+                            <% }%>
+
+                            <% for (let row of rows1) {%>
+                            <td scope="row" class="text-center"><%= row.Tmikro %></td>
+                            <% }%>
+             
+                              
                         </tr>
                     </tbody>
                 </table>
