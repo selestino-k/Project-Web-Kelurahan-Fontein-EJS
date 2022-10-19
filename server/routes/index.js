@@ -19,7 +19,7 @@ const pool = mysql.createPool({
 });
 
 /* GET home page. */
-router.get('/index', function(req, res, next) {
+router.get('/', function(req, res, next) {
     //connect db.
     pool.getConnection((err, connection) => {
       if (err) throw err; //NOT CONNECTED.

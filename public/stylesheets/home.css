@@ -1,4 +1,3 @@
-@import url('http://fonts.cdnfonts.com/css/cocogoose');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;400;700;800&family=Inter:wght@100;400;700;900&display=swap');
 
 
@@ -12,7 +11,7 @@ header,section{
 
 :root{
     font-family: "Inter", sans-serif;
-    font-family: "COCOGOOSE", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-family: "Barlow";
     --navbarcolor: #ffecab;
     --footercolor : #2b2e7f;
@@ -41,7 +40,7 @@ header{
     padding-right: 1000vw;
 }
 .cover .content h1{
-    font-family: "Cocogoose";
+    font-family: "Poppins";
     font-size: 5vw;
 }
 .cover .content p{

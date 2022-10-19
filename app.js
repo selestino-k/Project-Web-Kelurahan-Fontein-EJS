@@ -1,20 +1,15 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
-var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var favicon = require('express-favicon');
 var bodyparser = require('body-parser');
 
-var bodyParser = require("body-parser");
-var cors = require("cors");
 var mysql = require("mysql");
-var cons = require('consolidate');
 
 require("dotenv").config();
 
 var indexRouter = require('./server/routes/index');
-var usersRouter = require('./server/routes/users');
 var profileRouter = require('./server/routes/profile');
 var strukturRouter = require('./server/routes/struktur');
 var dataRouter = require('./server/routes/data');
@@ -44,9 +39,7 @@ app.use(bodyparser.json());
   
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
-app.use('/users', usersRouter);
 app.use('/profile', profileRouter);
 app.use('/struktur',strukturRouter)
 app.use('/data',dataRouter);
