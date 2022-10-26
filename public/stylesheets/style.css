@@ -66,6 +66,14 @@ a:hover{
 .tabel{
     margin: 3vw;
 }
+.modal{
+    color: black;
+ }
+.btn-primary{
+    background-color: var(--footercolor);
+    border: var(--footercolor);
+}
+
 .buttondata {
     padding-left: 4vw;
     padding-top: 50px;
