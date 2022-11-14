@@ -57,12 +57,13 @@ header{
 
 /** -- STYLE KOTAK ANGKA STATS - RECTANGLE **/
 
+/**RECTANGLE 1-4**/
 .rectangle1, .rectangle2, .rectangle3, .rectangle4{
     transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
     cursor: pointer;
 }
 .rectangle1:hover, .rectangle2:hover, .rectangle3:hover, .rectangle4:hover{
-  transform: scale(1.05);
+  transform: scale(1.20);
   box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
 }
 
@@ -75,17 +76,14 @@ header{
     margin: 1rem;
     color : white;
     margin: 25px;
+    border-radius:15px;
 }
 .numbers .rectangle1 i, .rectangle2 i, .rectangle3 i, .rectangle4 i {
   position: absolute;
   padding-right: 100px;
 }
 
-.rectangle1{
-    background-color: rgb(23, 111, 199);
-    overflow: hidden;
-    position: relative;
-}
+
 .rectangle1 .icons ,.rectangle2 .icons, .rectangle3 .icons, .rectangle4 .icons {
     opacity: 0.5;
     position: absolute;
@@ -93,6 +91,11 @@ header{
     top: 45px;
     width: 45%;
     height: auto;
+}
+.rectangle1{
+    background-color: rgb(23, 111, 199);
+    overflow: hidden;
+    position: relative;
 }
 .rectangle2{
     background-color: olivedrab;
@@ -121,9 +124,76 @@ header{
     padding-right: 18px;
 }
 
-/** STYLE PUBLIKASI - YG MMUAT DOK. **/
 
-section h3{
+/**RECTANGLE 5-7**/
+.rectangle5, .rectangle6, .rectangle7{
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    cursor: pointer;
+}
+.rectangle5:hover, .rectangle6:hover, .rectangle7:hover{
+  transform: scale(1.20);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.rectangle5, .rectangle6, .rectangle7{
+    position:relative;
+    z-index: 1;
+    /* width: 350px;
+    height: 20vh; */
+    padding-top: 4vmin;
+    margin: 1rem;
+    color : white;
+    margin: 25px;
+    border-radius:15px;
+}
+.numbers .rectangle5 i, .rectangle6 i, .rectangle7 i{
+  position: absolute;
+  padding-right: 100px;
+}
+
+
+.rectangle5 .icons ,.rectangle6 .icons, .rectangle7 .icons {
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    top: 45px;
+    width: 45%;
+    height: auto;
+}
+.rectangle5{
+    background-color: rgb(78, 97, 115);
+    overflow: hidden;
+    position: relative;
+}
+.rectangle6{
+    background-color: rgb(15, 53, 109);
+    overflow: hidden;
+    position: relative;
+}
+.rectangle7{
+    background-color: rgb(157, 9, 86);
+    overflow: hidden;
+    position: relative;
+}
+
+.numbers.rectangle5 p, .numbers.rectangle6 p, .numbers.rectangle7 p {
+    font-size: 22vw;
+}
+.rectangle5 p, .rectangle6 p, .rectangle7 p{
+    padding-right: 1vw;
+    padding-bottom: 3vh;
+}
+.numbers .rectangle5 h1 , .rectangle6 h1, .rectangle7 h1{
+    font-size: 4.5vw;
+    padding-right: 18px;
+}
+
+/** STYLE PUBLIKASI - YG MMUAT DOK. **/
+section{
+    border-radius: 20px;
+}
+
+section h3,h5{
     padding-left: 50px;
     padding-top: 30px;
 }

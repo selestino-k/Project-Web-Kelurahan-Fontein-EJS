@@ -212,9 +212,12 @@ i{
 }
 footer img{
     padding: 5px;
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    cursor: pointer;
 
 }
-
-
+footer img:hover{
+    transform: scale(1.20);
+}
 
                 
