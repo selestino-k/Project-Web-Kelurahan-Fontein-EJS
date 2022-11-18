@@ -59,3 +59,32 @@ exports.view_umkm = (req, res) => {
   //   });
   // });
 };
+
+//View data
+exports.view_jeniskelamin = (req, res) => {
+ 
+  //connect db.
+  pool.getConnection((err, connection) => {
+    if (err) throw err; //NOT CONNECTED.
+    console.log(`Connected as ID ` + connection.threadId);
+    
+    //show data
+    connection.query("SELECT SUM(jenis_kelamin ='Laki-Laki') AS Total_laki FROM penduduk", (err, rows1) => {
+      //when done with the connection, release it.
+      connection.query("SELECT SUM (jenis_kelamin = 'Perempuan') AS Total_perempuan FROM penduduk", (err, rows2) => {
+            //when done with the connection, release it.
+            connection.query("SELECT COUNT(jenis_kelamin) AS TotalJK FROM penduduk", (err, rows3) => {
+              connection.release();
+
+              if(!err){
+                  res.render("data-jeniskelamin",{rows1, rows2,rows3});
+              }
+              else{
+                  console.log(err);
+              } 
+              // console.log('The data from user table: \n', rows1, rows2,rows3);
+       });
+    });
+    });
+  });
+};
