@@ -57,7 +57,8 @@ a:hover{
     color: var(--textcolor);
     border-collapse: collapse;
     border-radius: 3px;
-    overflow: hidden;
+    overflow:visible;
+    
 }
 .table th{
     background-color:var(--footercolor);
@@ -65,6 +66,9 @@ a:hover{
 }
 .tabel{
     margin: 3vw;
+    
+    
+    
 }
 .modal{
     color: black;

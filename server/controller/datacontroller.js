@@ -9,6 +9,7 @@ const pool = mysql.createPool({
   database: process.env.DB_NAME,
 });
 
+//view count umkm
 exports.view_umkm = (req, res) => {
  
   //connect db.
@@ -42,14 +43,7 @@ exports.view_umkm = (req, res) => {
                 // console.log('The data from user table: \n', rows1, rows2, rows3,rows4);
 
 
-                if(!err){
-                    res.render("data",{usahamikro, usahakecil, usahamenengah,});
-                }
                 
-                else{
-                    console.log(err);
-                } 
-                console.log('The data from user table: \n', usahamikro, usahakecil, usahamenengah,);              
               });
           });
         });
@@ -60,6 +54,107 @@ exports.view_umkm = (req, res) => {
   // });
 };
 
+//VIEW TABLE UMKM
+exports.view_tabelumkm = (req, res) => {
+  //connect db.s
+  pool.getConnection((err, connection) => {
+    if (err) throw err; //NOT CONNECTED.
+    console.log(`Connected as ID ` + connection.threadId);
+
+    //show data
+    connection.query("SELECT * FROM umkm", (err, rows) => {
+      //when done with the connection, release it.
+      connection.release();
+
+      if (!err) {
+        res.render("data", { 
+          rows, 
+          sukses: req.query.sukses, 
+          pesan: req.query.pesan 
+        });
+      } else {
+        console.log(err);
+      }
+      // console.log("The data from user table: \n", rows);
+    });
+  });
+};
+//view tabel usaha mikro
+exports.view_tabelmikro = (req, res) => {
+  //connect db.
+  pool.getConnection((err, connection) => {
+    if (err) throw err; //NOT CONNECTED.
+    console.log(`Connected as ID ` + connection.threadId);
+
+    //show data
+    connection.query("SELECT * FROM umkm WHERE omset ='Omset <= Rp.300 Juta' AND kekayaan_bersih_usaha = 'KBU <= Rp.50 Juta' OR omset ='Omset <= Rp.300 Juta' AND kekayaan_bersih_usaha = 'Rp.50 Juta < KBU <= Rp.500 Juta' OR omset = 'Rp.300 Juta < Omset <= Rp.2,5 Milliar' AND kekayaan_bersih_usaha = 'KBU <= Rp.50 Juta'", (err, rows) => {
+      //when done with the connection, release it.
+      connection.release();
+
+      if (!err) {
+        res.render("datamikro", { 
+          rows, 
+          sukses: req.query.sukses, 
+          pesan: req.query.pesan 
+        });
+      } else {
+        console.log(err);
+      }
+      // console.log("The data from user table: \n", rows);
+    });
+  });
+};
+//view tabel usaha kecil
+exports.view_tabelkecil = (req, res) => {
+  //connect db.
+  pool.getConnection((err, connection) => {
+    if (err) throw err; //NOT CONNECTED.
+    console.log(`Connected as ID ` + connection.threadId);
+
+    //show data
+    connection.query("SELECT * FROM umkm WHERE omset ='Rp.300 Juta < Omset <= Rp.2,5 Milliar' AND kekayaan_bersih_usaha = 'KBU <= Rp.50 Juta' OR omset ='Rp.300 Juta < Omset <= Rp.2,5 Milliar' AND kekayaan_bersih_usaha = 'Rp.500 Juta < KBU <= Rp.10 Milliar' OR omset = 'Rp.2,5 Milliar < Omset <= Rp.50 Milliar' AND kekayaan_bersih_usaha = 'Rp.500 Juta < KBU <= Rp.10 Miliar'", (err, rows) => {
+      //when done with the connection, release it.
+      connection.release();
+
+      if (!err) {
+        res.render("datakecil", { 
+          rows, 
+          sukses: req.query.sukses, 
+          pesan: req.query.pesan 
+        });
+      } else {
+        console.log(err);
+      }
+      // console.log("The data from user table: \n", rows);
+    });
+  });
+};
+
+//view tabel usaha menengah
+exports.view_tabelmenengah = (req, res) => {
+  //connect db.
+  pool.getConnection((err, connection) => {
+    if (err) throw err; //NOT CONNECTED.
+    console.log(`Connected as ID ` + connection.threadId);
+
+    //show data
+    connection.query("SELECT * FROM umkm WHERE omset ='Rp.2,5 Milliar < Omset <= Rp.50 Milliar' AND kekayaan_bersih_usaha = 'Rp.500 Juta < KBU <= Rp.10 Milliar'", (err, rows) => {
+      //when done with the connection, release it.
+      connection.release();
+
+      if (!err) {
+        res.render("datamenengah", { 
+          rows, 
+          sukses: req.query.sukses, 
+          pesan: req.query.pesan 
+        });
+      } else {
+        console.log(err);
+      }
+      // console.log("The data from user table: \n", rows);
+    });
+  });
+};
 //View data
 exports.view_jeniskelamin = (req, res) => {
  

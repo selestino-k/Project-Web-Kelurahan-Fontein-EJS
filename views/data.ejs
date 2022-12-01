@@ -74,39 +74,38 @@
                     
                    
                 </div>
-            </div> <div class="tabel">
-                <table id="example" class="table mt-5 mt-5 table-str table-bordered" style="width:95% ;margin-right: auto;margin-left: auto;">
-                    <thead>
-                        <tr>
-                            <th scope="col" class="text-center">Total UMKM</th>
-                            <th scope="col" class="text-center">Usaha Mikro </th>
-                            <th scope="col" class="text-center">Usaha Kecil </th>
-                            <th scope="col" class="text-center">Usaha Menengah </th>
+            </div> 
+            <
+            <div class="tabel">
+                <table id="dtHorizontalVerticalExample" class="table table-striped table-bordered table-sm " cellspacing="0" width="100%">
+                <thead>
+                    <tr>
 
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <% for (let row of rows4) {%>
-                            <td scope="row" class="text-center"><%= row.TotalUMKM %></td>
-                            <% }%>
-                            
-                                
-                            <% for (let row of rows1) {%>
-                            <td scope="row" class="text-center"><%= row.Tmikro %></td>
-                            <% }%>
-             
-                            <% for (let row of rows2) {%>
-                            <td scope="row" class="text-center"><%= row.Tkecil %></td>
-                            <% }%>
+                    <th scope="col" class="text-center">No</th>
+                    <th scope="col" class="text-center">Nama Usaha</th>
+                    <th scope="col" class="text-center">Alamat Tempat Usaha</th>
+                    <th scope="col" class="text-center">Nama Pemilik</th>
+                    <th scope="col" class="text-center">Jenis Pengelolaan Usaha</th>
+                    <th scope="col" class="text-center">Rincian kegiatan Usaha</th>
 
-                            <% for (let row of rows3) {%>
-                            <td scope="row" class="text-center"><%= row.Tmenengah %></td>
-                            <% }%>
-             
-                              
-                        </tr>
-                    </tbody>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <% var number = 1; %>
+                    <% for (let row of rows) {%>
+                    <td scope="row" class="text-center" ><%= number %></td>
+                    <td scope="row" class="text-center" ><%= row.nama_usaha %></td>
+                    <td scope="row" class="text-center" ><%= row.alamat_tempat_usaha %></td>
+                    <td scope="row" class="text-center" ><%= row.nama_pemilik %></td>
+                    <td scope="row" class="text-center" ><%= row.jenis_pengelolaan_usaha %></td>
+                    <td scope="row" class="text-center" ><%= row.rincian_kgiatan_usaha %></td>
+
+                    <% number++; %>
+                    </tr>
+                    <% }%>
+                </tbody>
                 </table>
             </div>
 
@@ -114,7 +113,16 @@
         
         </section>
     </main>
-    
+    <script>
+        
+        $(document).ready(function () {
+        $('#dtHorizontalVerticalExample').DataTable({
+            "scrollX": true,
+            "scrollY": 200,
+        });
+        $('.dataTables_length').addClass('bs-select');
+        });
+</script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="/javascripts/document.js"></script>
