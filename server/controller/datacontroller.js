@@ -33,23 +33,23 @@ exports.view_umkm = (req, res) => {
                 connection.release();
 
                 if(!err){
-                    res.render("data",{rows1, rows2, rows3,rows4});
+                    res.render("data",{rows1, rows2, rows3, rows4});
                 }
                 
                 else{
                     console.log(err);
                 } 
-                console.log('The data from user table: \n', rows1, rows2, rows3,rows4);
+                // console.log('The data from user table: \n', rows1, rows2, rows3,rows4);
 
 
-                // if(!err){
-                //     res.render("data",{usahamikro, usahakecil, usahamenengah,});
-                // }
+                if(!err){
+                    res.render("data",{usahamikro, usahakecil, usahamenengah,});
+                }
                 
-                // else{
-                //     console.log(err);
-                // } 
-                // console.log('The data from user table: \n', usahamikro, usahakecil, usahamenengah,);              
+                else{
+                    console.log(err);
+                } 
+                console.log('The data from user table: \n', usahamikro, usahakecil, usahamenengah,);              
               });
           });
         });
@@ -77,13 +77,15 @@ exports.view_jeniskelamin = (req, res) => {
               connection.release();
 
               if(!err){
-                  res.render("data-jeniskelamin",{rows1, rows2,rows3});
+                  res.render("data-jeniskelamin",{rows1, rows2, rows3});
               }
               else{
                   console.log(err);
               } 
-              // console.log('The data from user table: \n', rows1, rows2,rows3);
-       });
+              console.log('The data from user table: \n', rows1, rows2,rows3);
+              
+                
+      });
     });
     });
   });
