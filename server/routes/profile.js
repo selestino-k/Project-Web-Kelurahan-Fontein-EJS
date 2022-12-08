@@ -13,5 +13,8 @@ router.get('/peta', function(req, res, next) {
 router.get('/fasilitas', function(req, res, next) {
     res.render('fasilitas');
  });
+ router.get('/umkm', function(req, res, next) {
+  res.render('umkm');
+});
 
 module.exports = router;

@@ -206,6 +206,8 @@ footer p{
 }
 footer h5{
     font-family: "Barlow";
+    text-align: center;
+    padding-left: 0;
 }
 footer i {
     padding: 5px;
