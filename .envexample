@@ -1,5 +1,5 @@
 DB_HOST = 127.0.0.1:3306
-DB_NAME = umkm_fontein
+DB_NAME = db_kel_fontein_old
 DB_USER = root
 DB_PASS = 
 
